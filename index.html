@@ -18,7 +18,8 @@
     (() => {
       try {
         const stored = localStorage.getItem('themeMode');
-        if (stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (stored ? stored === 'dark'
+                 : window.matchMedia('(prefers-color-scheme: dark)').matches) {
           document.documentElement.classList.add('dark');
         }
       } catch (_) {}
