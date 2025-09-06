@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hazim Iftikhar - Portfolio</title>
+
+  <!-- Tailwind CDN with darkMode class enabled -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class', // ensure dark: works
+    }
+  </script>
+
+  <!-- Basecoat Theme Script -->
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('themeMode');
+        if (stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (_) {}
+
+      const apply = (dark) => {
+        document.documentElement.classList.toggle('dark', dark);
+        try {
+          localStorage.setItem('themeMode', dark ? 'dark' : 'light');
+        } catch (_) {}
+      };
+
+      document.addEventListener('basecoat:theme', (event) => {
+        const mode = event.detail?.mode;
+        apply(
+          mode === 'dark' ? true
+          : mode === 'light' ? false
+          : !document.documentElement.classList.contains('dark')
+        );
+      });
+    })();
+  </script>
+</head>
+<body class="bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- Theme Switcher -->
+  <div class="fixed top-4 right-4">
+    <button
+      type="button"
+      aria-label="Toggle dark mode"
+      onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))"
+      class="p-2 border rounded-full border-gray-400 dark:border-gray-200"
+    >
+      <span class="hidden dark:block">
+        <!-- Sun icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+      </span>
+      <span class="block dark:hidden">
+        <!-- Moon icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <header class="text-center py-16">
+    <h1 class="text-4xl font-bold mb-4">Hazim Iftikhar</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300">Computer Science Undergraduate | Developer | Tech Enthusiast</p>
+  </header>
+
+  <section id="about" class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+      I am a second-year Computer Science undergraduate with experience in software development and web applications. I enjoy building projects that combine functionality with clean design and exploring innovative solutions to technical challenges.
+    </p>
+  </section>
+
+  <section id="projects" class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+    <div class="space-y-6">
+      <div class="p-4 border rounded-lg border-gray-300 dark:border-gray-700">
+        <h3 class="text-xl font-semibold mb-2">Finance Tracker Web App</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          A web application for tracking expenses, visualizing data, and categorizing finances efficiently. Built using HTML, JavaScript, and Express.js with Excel download functionality.
+        </p>
+      </div>
+      <div class="p-4 border rounded-lg border-gray-300 dark:border-gray-700">
+        <h3 class="text-xl font-semibold mb-2">Compliance Web App Internship Project</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Contributed to building a compliance management web application, improving workflow efficiency and implementing front-end components for interactive user experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-8 text-gray-500 dark:text-gray-400">
+    &copy; 2025 Hazim Iftikhar. All rights reserved.
+  </footer>
+
+</body>
+</html>
