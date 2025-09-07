@@ -85,6 +85,16 @@
   border-radius: 50%;
   border-top-color: transparent;
   animation: spin 1s linear infinite;
+
+  /* Default colors for light theme */
+  border-color: black;      /* the rest of the circle */
+  border-top-color: transparent;
+}
+
+/* Dark mode preloader */
+.dark .loader {
+  border-color: white;      /* the rest of the circle */
+  border-top-color: transparent;
 }
 
 @keyframes spin {
