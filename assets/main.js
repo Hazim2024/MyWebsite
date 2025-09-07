@@ -41,3 +41,15 @@ if (backtotop) {
   });
 }
 
+// Hide preloader after page fully loads
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    preloader.style.transition = 'opacity 0.5s ease';
+    preloader.style.opacity = '0';
+    // Allow clicks immediately
+    preloader.style.pointerEvents = 'none';
+    setTimeout(() => preloader.remove(), 500);
+  }
+});
+

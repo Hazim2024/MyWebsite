@@ -8,6 +8,15 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+#theme-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+
 .dark .theme-toggle {
   border-color: #e5e7eb; /* gray-200 */
 }
@@ -60,21 +69,25 @@
   }
 }
 
-/* Animate only the children of #main-content */
+/* Animate children of #main-content without blocking clicks */
 #main-content > * {
-  opacity: 0; /* Start hidden */
+  opacity: 0;
   animation: slideUp 0.8s ease-out forwards;
   animation-delay: calc(var(--order) * 0.1s);
-  pointer-events: none; /* Prevent blocking clicks during animation */
-}
-
-/* Enable pointer events after animation finishes */
-#main-content > *:nth-child(n) {
-  animation-fill-mode: forwards;
-}
-
-#main-content > *.animated {
-  pointer-events: auto;
+  /* pointer-events removed so clicks work immediately */
 }
 
 
+/* Preloader loader style */
+.loader {
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
