@@ -16,3 +16,28 @@ AOS.init({
   duration: 700,
   once: true,
 });
+
+// Back to top button
+let backtotop = document.querySelector('.back-to-top');
+if (backtotop) {
+  const toggleBacktotop = () => {
+    if (window.scrollY > 100) {
+      backtotop.classList.add('active');
+    } else {
+      backtotop.classList.remove('active');
+    }
+  }
+
+  // Run on page load
+  window.addEventListener('load', toggleBacktotop);
+
+  // Run on scroll
+  window.addEventListener('scroll', toggleBacktotop);
+
+  // Smooth scroll to top
+  backtotop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
