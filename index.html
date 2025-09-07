@@ -8,8 +8,11 @@
   <!-- Tailwind CDN with darkMode class enabled -->
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Devicon CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <!-- Devicon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/style.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -55,7 +58,7 @@
       type="button"
       aria-label="Toggle dark mode"
       onclick="document.dispatchEvent(new CustomEvent('basecoat:theme'))"
-      class="p-2 border rounded-full border-gray-400 dark:border-gray-200"
+      class="theme-toggle"
     >
       <span class="hidden dark:block">
         <!-- Sun icon -->
@@ -86,168 +89,164 @@
   </section>
 
   <!-- Work Experience Section -->
-<section id="work" class="max-w-3xl mx-auto px-6 py-12">
-  <h2 class="text-2xl font-semibold mb-4">Work Experience</h2>
+  <section id="work" class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold mb-4">Work Experience</h2>
 
-  <div class="relative border-l-2 border-gray-300 dark:border-gray-600 -left-4">
-    <!-- Work Item 1 -->
-    <div class="mb-8 pl-4 relative" data-aos="fade-up" data-aos-delay="150">
-      <span class="absolute -left-2 top-0 w-4 h-4 bg-gray-500 dark:bg-gray-200 rounded-full border-2 border-white dark:border-gray-900"></span>
-      <p class="text-sm text-gray-500 dark:text-gray-400">06/2025 – 08/2025 | Liverpool, UK</p>
-      <h3 class="text-lg font-semibold">xxx Internship</h3>
-      <p class="text-gray-700 dark:text-gray-300">xxx</p>
-      <ul class="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300">
-        <li>Built a full-stack web application using a low-code platform, including UI design and front-end development</li>
-        <li>Designed and implemented back-end database structures, managing tables and data relationships</li>
-        <li>Integrated third-party APIs to enhance system functionality and improve user experience</li>
-        <li>Collaborated directly with company directors to gather requirements and deliver tailored solutions</li>
-      </ul>
-    </div>
+    <div class="relative border-l-2 border-gray-300 dark:border-gray-600 -left-4">
+      <!-- Work Item 1 -->
+      <div class="mb-8 pl-4 relative" data-aos="fade-up" data-aos-delay="150">
+        <span class="absolute -left-2 top-0 w-4 h-4 bg-gray-500 dark:bg-gray-200 rounded-full border-2 border-white dark:border-gray-900"></span>
+        <p class="text-sm text-gray-500 dark:text-gray-400">06/2025 – 08/2025 | Liverpool, UK</p>
+        <h3 class="text-lg font-semibold">xxx Internship</h3>
+        <p class="text-gray-700 dark:text-gray-300">xxx</p>
+        <ul class="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300">
+          <li>Built a full-stack web application using a low-code platform, including UI design and front-end development</li>
+          <li>Designed and implemented back-end database structures, managing tables and data relationships</li>
+          <li>Integrated third-party APIs to enhance system functionality and improve user experience</li>
+          <li>Collaborated directly with company directors to gather requirements and deliver tailored solutions</li>
+        </ul>
+      </div>
 
-    <!-- Work Item 2 -->
-    <div class="mb-8 pl-4 relative" data-aos="fade-up" data-aos-delay="150">
-      <span class="absolute -left-2 top-0.5 w-4 h-4 bg-gray-500 dark:bg-gray-200 rounded-full border-2 border-white dark:border-gray-900"></span>
-      <p class="text-sm text-gray-500 dark:text-gray-400">11/2024 – 06/2025 | x, UK</p>
-      <h3 class="text-lg font-semibold">Open Day Ambassador</h3>
-      <p class="text-gray-700 dark:text-gray-300">xxxx University</p>
-      <ul class="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300">
-        <li>Represented the university across multiple open days during the 2024/25 academic year, providing prospective students and families with guidance and campus information</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Education Section -->
-<section id="education" class="max-w-3xl mx-auto px-6 py-12">
-  <h2 class="text-2xl font-semibold mb-4">Education</h2>
-
-  <div class="relative border-l-2 border-gray-300 dark:border-gray-600 -left-4">
-    <!-- Education Item 1 -->
-    <div class="mb-8 pl-4 relative" data-aos="fade-up" data-aos-delay="150">
-      <span class="absolute -left-2 top-0 w-4 h-4 bg-gray-500 dark:bg-gray-200 rounded-full border-2 border-white dark:border-gray-900"></span>
-      <p class="text-sm text-gray-500 dark:text-gray-400">09/2023 – Present | x, UK</p>
-      <h3 class="text-lg font-semibold">BSc Computer Science (Third Year)</h3>
-      <p class="text-gray-700 dark:text-gray-300">xxx University</p>
-      <ul class="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300">
-        <li>Skilled in Database Systems, focusing on SQL query optimization and schema design for real-world projects</li>
-        <li>Proficient in Java and Python, with academic exposure to algorithm design, data structures, and automata</li>
-        <li>Experience in Object Oriented Programming and building efficient systems through academic projects</li>
-        <li>Developed dynamic applications through coursework in Mobile and Web Development</li>
-      </ul>
-    </div>
-
-    <!-- Education Item 2 -->
-    <div class="mb-8 pl-4 relative" data-aos="fade-up" data-aos-delay="150">
-      <span class="absolute -left-2 top-0.5 w-4 h-4 bg-gray-500 dark:bg-gray-200 rounded-full border-2 border-white dark:border-gray-900"></span>
-      <p class="text-sm text-gray-500 dark:text-gray-400">09/2019 – 05/2023 | x, Saudi Arabia</p>
-      <h3 class="text-lg font-semibold">A-Levels and IGCSE</h3>
-      <p class="text-gray-700 dark:text-gray-300">xxx School x</p>
-      <ul class="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300">
-        <li>A-Levels (2021-2023): Computer Science (B), Maths (B), Physics (B)</li>
-        <li>IGCSE (2019-2021): 9 subjects — 3 A*s (Maths, IT, Physics) and 5 As</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-
-
-
- <section id="projects" class="max-w-3xl mx-auto px-6 py-12">
-  <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-  <div class="space-y-6">
-
-    <div class="p-4 border rounded-lg border-gray-300 dark:border-gray-700">
-      <h3 class="text-xl font-semibold mb-2">Finance Tracker Web App</h3>
-      <p class="text-gray-700 dark:text-gray-300">
-        A web application for tracking expenses, visualizing data, and categorizing finances efficiently. Built using HTML, JavaScript, and Express.js with Excel download functionality.
-      </p>
-      <!-- Buttons -->
-      <div class="mt-3 space-x-3">
-        <a href="#" class="px-3 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition-colors duration-200 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-black">View Demo</a>
-        <a href="#" class="px-3 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition-colors duration-200 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-black">View Repo</a>
+      <!-- Work Item 2 -->
+      <div class="mb-8 pl-4 relative" data-aos="fade-up" data-aos-delay="150">
+        <span class="absolute -left-2 top-0.5 w-4 h-4 bg-gray-500 dark:bg-gray-200 rounded-full border-2 border-white dark:border-gray-900"></span>
+        <p class="text-sm text-gray-500 dark:text-gray-400">11/2024 – 06/2025 | x, UK</p>
+        <h3 class="text-lg font-semibold">Open Day Ambassador</h3>
+        <p class="text-gray-700 dark:text-gray-300">xxxx University</p>
+        <ul class="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300">
+          <li>Represented the university across multiple open days during the 2024/25 academic year, providing prospective students and families with guidance and campus information</li>
+        </ul>
       </div>
     </div>
+  </section>
 
-    <div class="p-4 border rounded-lg border-gray-300 dark:border-gray-700">
-      <h3 class="text-xl font-semibold mb-2">Compliance Web App Internship Project</h3>
-      <p class="text-gray-700 dark:text-gray-300">
-        Contributed to building a compliance management web application, improving workflow efficiency and implementing front-end components for interactive user experience.
-      </p>
-      <!-- Buttons -->
-      <div class="mt-3 space-x-3">
-        <a href="#" class="px-3 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition-colors duration-200 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-black">View Demo</a>
-        <a href="#" class="px-3 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition-colors duration-200 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-black">View Repo</a>
+  <!-- Education Section -->
+  <section id="education" class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold mb-4">Education</h2>
+
+    <div class="relative border-l-2 border-gray-300 dark:border-gray-600 -left-4">
+      <!-- Education Item 1 -->
+      <div class="mb-8 pl-4 relative" data-aos="fade-up" data-aos-delay="150">
+        <span class="absolute -left-2 top-0 w-4 h-4 bg-gray-500 dark:bg-gray-200 rounded-full border-2 border-white dark:border-gray-900"></span>
+        <p class="text-sm text-gray-500 dark:text-gray-400">09/2023 – Present | x, UK</p>
+        <h3 class="text-lg font-semibold">BSc Computer Science (Third Year)</h3>
+        <p class="text-gray-700 dark:text-gray-300">xxx University</p>
+        <ul class="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300">
+          <li>Skilled in Database Systems, focusing on SQL query optimization and schema design for real-world projects</li>
+          <li>Proficient in Java and Python, with academic exposure to algorithm design, data structures, and automata</li>
+          <li>Experience in Object Oriented Programming and building efficient systems through academic projects</li>
+          <li>Developed dynamic applications through coursework in Mobile and Web Development</li>
+        </ul>
+      </div>
+
+      <!-- Education Item 2 -->
+      <div class="mb-8 pl-4 relative" data-aos="fade-up" data-aos-delay="150">
+        <span class="absolute -left-2 top-0.5 w-4 h-4 bg-gray-500 dark:bg-gray-200 rounded-full border-2 border-white dark:border-gray-900"></span>
+        <p class="text-sm text-gray-500 dark:text-gray-400">09/2019 – 05/2023 | x, Saudi Arabia</p>
+        <h3 class="text-lg font-semibold">A-Levels and IGCSE</h3>
+        <p class="text-gray-700 dark:text-gray-300">xxx School x</p>
+        <ul class="list-disc ml-5 mt-2 text-gray-700 dark:text-gray-300">
+          <li>A-Levels (2021-2023): Computer Science (B), Maths (B), Physics (B)</li>
+          <li>IGCSE (2019-2021): 9 subjects — 3 A*s (Maths, IT, Physics) and 5 As</li>
+        </ul>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+    <div class="space-y-6">
 
-<!-- Tools & Technologies Section -->
-<section id="tools" class="max-w-3xl mx-auto px-6 py-12">
-  <h2 class="text-2xl font-semibold mb-6">Tools & Technologies</h2>
+      <div class="p-4 border rounded-lg border-gray-300 dark:border-gray-700">
+        <h3 class="text-xl font-semibold mb-2">Finance Tracker Web App</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          A web application for tracking expenses, visualizing data, and categorizing finances efficiently. Built using HTML, JavaScript, and Express.js with Excel download functionality.
+        </p>
+        <!-- Buttons -->
+        <div class="mt-3 space-x-3">
+          <a href="#" class="project-btn">View Demo</a>
+          <a href="#" class="project-btn">View Repo</a>
+        </div>
+      </div>
 
-  <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-6 justify-items-center">
-    <!-- Python -->
-    <div class="flex flex-col items-center gap-1">
-      <i class="devicon-python-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
-      <span class="text-sm text-gray-800 dark:text-gray-200">Python</span>
+      <div class="p-4 border rounded-lg border-gray-300 dark:border-gray-700">
+        <h3 class="text-xl font-semibold mb-2">Compliance Web App Internship Project</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Contributed to building a compliance management web application, improving workflow efficiency and implementing front-end components for interactive user experience.
+        </p>
+        <!-- Buttons -->
+        <div class="mt-3 space-x-3">
+          <a href="#" class="project-btn">View Demo</a>
+          <a href="#" class="project-btn">View Repo</a>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <!-- PHP -->
-    <div class="flex flex-col items-center gap-1">
-      <i class="devicon-php-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
-      <span class="text-sm text-gray-800 dark:text-gray-200">PHP</span>
+  <!-- Tools & Technologies Section -->
+  <section id="tools" class="max-w-3xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold mb-6">Tools & Technologies</h2>
+
+    <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-6 justify-items-center">
+      <!-- Python -->
+      <div class="flex flex-col items-center gap-1">
+        <i class="devicon-python-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
+        <span class="text-sm text-gray-800 dark:text-gray-200">Python</span>
+      </div>
+
+      <!-- PHP -->
+      <div class="flex flex-col items-center gap-1">
+        <i class="devicon-php-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
+        <span class="text-sm text-gray-800 dark:text-gray-200">PHP</span>
+      </div>
+
+      <!-- HTML5 -->
+      <div class="flex flex-col items-center gap-1">
+        <i class="devicon-html5-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
+        <span class="text-sm text-gray-800 dark:text-gray-200">HTML5</span>
+      </div>
+
+      <!-- CSS3 -->
+      <div class="flex flex-col items-center gap-1">
+        <i class="devicon-css3-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
+        <span class="text-sm text-gray-800 dark:text-gray-200">CSS3</span>
+      </div>
+
+      <!-- Java -->
+      <div class="flex flex-col items-center gap-1">
+        <i class="devicon-java-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
+        <span class="text-sm text-gray-800 dark:text-gray-200">Java</span>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="flex flex-col items-center gap-1">
+        <i class="devicon-javascript-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
+        <span class="text-sm text-gray-800 dark:text-gray-200">JavaScript</span>
+      </div>
+
+      <!-- SQL / MySQL -->
+      <div class="flex flex-col items-center gap-1">
+        <i class="devicon-mysql-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
+        <span class="text-sm text-gray-800 dark:text-gray-200">SQL (MySQL)</span>
+      </div>
     </div>
+  </section>
 
-    <!-- HTML5 -->
-    <div class="flex flex-col items-center gap-1">
-      <i class="devicon-html5-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
-      <span class="text-sm text-gray-800 dark:text-gray-200">HTML5</span>
-    </div>
-
-    <!-- CSS3 -->
-    <div class="flex flex-col items-center gap-1">
-      <i class="devicon-css3-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
-      <span class="text-sm text-gray-800 dark:text-gray-200">CSS3</span>
-    </div>
-
-    <!-- Java -->
-    <div class="flex flex-col items-center gap-1">
-      <i class="devicon-java-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
-      <span class="text-sm text-gray-800 dark:text-gray-200">Java</span>
-    </div>
-
-    <!-- JavaScript -->
-    <div class="flex flex-col items-center gap-1">
-      <i class="devicon-javascript-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
-      <span class="text-sm text-gray-800 dark:text-gray-200">JavaScript</span>
-    </div>
-
-    <!-- SQL / MySQL -->
-    <div class="flex flex-col items-center gap-1">
-      <i class="devicon-mysql-plain text-gray-800 dark:text-gray-200 text-5xl"></i>
-      <span class="text-sm text-gray-800 dark:text-gray-200">SQL (MySQL)</span>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="text-center py-8 text-gray-500 dark:text-gray-400">
-  &copy; 2025 Hazim Iftikhar. All rights reserved.
-</footer>
+  <!-- Footer -->
+  <footer class="text-center py-8 text-gray-500 dark:text-gray-400">
+    &copy; 2025 Hazim Iftikhar. All rights reserved.
+  </footer>
 
   <!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 700, // animation duration in ms
-    once: true,    // whether animation happens only once
-  });
-</script>
-
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700, // animation duration in ms
+      once: true,    // whether animation happens only once
+    });
+  </script>
 
 </body>
 </html>
