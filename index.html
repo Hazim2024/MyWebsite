@@ -5,50 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hazim Iftikhar - Portfolio</title>
 
-  <!-- Tailwind CDN with darkMode class enabled -->
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <!-- Devicon CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <!-- Prevent white flash on dark mode -->
+  <script>
+    try {
+      const stored = localStorage.getItem('themeMode');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (_) {}
+  </script>
 
-  <!-- Custom Styles -->
+  <!-- Tailwind CDN with darkMode class enabled -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link rel="stylesheet" href="assets/style.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class', // ensure dark: works
-    }
+    tailwind.config = { darkMode: 'class' };
   </script>
 
-  <!-- Basecoat Theme Script -->
-  <script>
-    (() => {
-      try {
-        const stored = localStorage.getItem('themeMode');
-        if (stored ? stored === 'dark'
-                 : window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.classList.add('dark');
-        }
-      } catch (_) {}
-
-      const apply = (dark) => {
-        document.documentElement.classList.toggle('dark', dark);
-        try {
-          localStorage.setItem('themeMode', dark ? 'dark' : 'light');
-        } catch (_) {}
-      };
-
-      document.addEventListener('basecoat:theme', (event) => {
-        const mode = event.detail?.mode;
-        apply(
-          mode === 'dark' ? true
-          : mode === 'light' ? false
-          : !document.documentElement.classList.contains('dark')
-        );
-      });
-    })();
-  </script>
 </head>
 <body class="bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
@@ -62,9 +39,7 @@
     >
       <span class="hidden dark:block">
         <!-- Sun icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" />
-          <path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg>
       </span>
       <span class="block dark:hidden">
         <!-- Moon icon -->
@@ -239,14 +214,10 @@
     &copy; 2025 Hazim Iftikhar. All rights reserved.
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 700, // animation duration in ms
-      once: true,    // whether animation happens only once
-    });
-  </script>
+<!-- JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/main.js"></script>
+
 
 </body>
 </html>
