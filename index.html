@@ -33,7 +33,7 @@
 <body class="bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
   <!-- Theme Switcher -->
-  <div class="fixed top-4 right-4">
+  <div class="fixed top-4 right-4" id="theme-switcher">
     <button
       type="button"
       aria-label="Toggle dark mode"
@@ -54,12 +54,13 @@
   </div>
 
   <!-- Main Content -->
-  <header class="text-center py-16">
+ <div id="main-content">  
+  <header class="text-center py-16" style="--order: 1;" >
     <h1 class="text-4xl font-bold mb-4">Hazim Iftikhar</h1>
     <p class="text-lg text-gray-600 dark:text-gray-300">Computer Science Undergraduate | Developer | Tech Enthusiast</p>
   </header>
 
-  <section id="about" class="max-w-3xl mx-auto px-6 py-12">
+  <section id="about" class="max-w-3xl mx-auto px-6 py-12" style="--order: 2;">
     <h2 class="text-2xl font-semibold mb-4">About Me</h2>
     <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
       I am a second-year Computer Science undergraduate with experience in software development and web applications. I enjoy building projects that combine functionality with clean design and exploring innovative solutions to technical challenges.
@@ -67,7 +68,7 @@
   </section>
 
     <!-- Tools & Technologies Section -->
-  <section id="tools" class="max-w-3xl mx-auto px-6 py-12">
+  <section id="tools" class="max-w-3xl mx-auto px-6 py-12" style="--order: 3;">
     <h2 class="text-2xl font-semibold mb-6">Tools & Technologies</h2>
 
     <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-6 justify-items-center">
@@ -252,6 +253,12 @@
 </section>
 
 
+  <!-- Footer -->
+  <footer class="text-center py-8 text-gray-500 dark:text-gray-400">
+    &copy; 2025 Hazim Iftikhar. All rights reserved.
+  </footer>
+</div> <!-- End of Main Content -->
+
 <a href="#" 
    class="back-to-top fixed bottom-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 text-white dark:bg-gray-200 dark:text-gray-900 shadow-lg opacity-0 pointer-events-none transition duration-300 transform hover:scale-110 hover:bg-gray-600 dark:hover:bg-gray-300 active:scale-95 active:bg-gray-800 dark:active:bg-gray-400 z-50" 
    aria-label="Back to top">
@@ -260,10 +267,7 @@
 
 
 
-  <!-- Footer -->
-  <footer class="text-center py-8 text-gray-500 dark:text-gray-400">
-    &copy; 2025 Hazim Iftikhar. All rights reserved.
-  </footer>
+
 
 <!-- JS Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
