@@ -53,3 +53,10 @@ window.addEventListener('load', () => {
   }
 });
 
+  // JavaScript function to trigger download
+  function downloadCV(fileName) {
+    const link = document.createElement('a');
+    link.href = fileName;
+    link.download = fileName;
+    link.click();
+  }
