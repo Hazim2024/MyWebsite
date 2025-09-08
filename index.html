@@ -42,11 +42,10 @@
     <div class="loader w-12 h-12"></div>
   </div>
 
-  <!-- Theme Switcher -->
-  <div class="fixed top-4 right-4" id="theme-switcher">
+<!-- Theme Switcher + Download Dropdown -->
+<div class="fixed top-4 right-4 flex items-center gap-4" id="theme-switcher">
 
-  
-  <!-- Download Dropdown -->
+  <!-- Download Dropdown (Basecoat) -->
   <div class="dropdown-menu">
     <button 
       type="button" 
@@ -54,18 +53,18 @@
       aria-haspopup="menu" 
       aria-controls="cv-dropdown-menu" 
       aria-expanded="false"
-      style="font-size: 1.25rem; padding: 0.5rem 1rem;" 
+      class="btn-outline p-2 text-lg flex items-center gap-2"
+      data-popover-target="#cv-dropdown-popover"
     >
-      <i class="bi bi-download" style="font-size: 1.5rem; vertical-align: middle;"></i> 
+      <i class="bi bi-download" style="font-size: 1.5rem;"></i>
+      
     </button>
 
-    <div id="cv-dropdown-popover" data-popover aria-hidden="true" data-align="end" style="min-width: 10rem;">
-      <div role="menu" id="cv-dropdown-menu" aria-labelledby="cv-dropdown-trigger">
-        <button role="menuitem" onclick="downloadCV('cv.pdf')">Download CV (PDF)</button>
-        <button role="menuitem" onclick="downloadCV('cv.docx')">Download CV (DOCX)</button>
-      </div>
+    <div id="cv-dropdown-popover" data-popover aria-hidden="true" data-align="end">
+    <div role="menu" id="cv-dropdown-menu" aria-labelledby="cv-dropdown-trigger">
+      <button role="menuitem" onclick="downloadCV('cv.pdf')">Download my CV</button>
     </div>
-  </div>
+    </div>
 
     <button
       type="button"

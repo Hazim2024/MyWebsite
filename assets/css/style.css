@@ -101,3 +101,48 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Dropdown popover styles */
+#cv-dropdown-popover {
+  min-width: 10rem;                  /* Slightly smaller width */
+  background-color: #fff;
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  z-index: 50;
+  padding: 0;                        /* No internal padding */
+}
+
+/* Dark mode */
+.dark #cv-dropdown-popover {
+  background-color: #000;
+  border-color: #4b5563;
+}
+
+/* Dropdown menu items */
+#cv-dropdown-menu button {
+  padding: 0.4rem 0.75rem;           /* Slightly smaller vertical padding */
+  text-align: left;
+  font-size: 0.95rem;                /* Slightly smaller text */
+  border-radius: 0;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  display: block;
+}
+
+/* Remove extra spacing inside buttons */
+#cv-dropdown-menu button > * {
+  margin-right: 0;
+}
+
+/* Hover effect */
+#cv-dropdown-menu button:hover {
+  background-color: #e5e7eb;
+}
+
+.dark #cv-dropdown-menu button:hover {
+  background-color: #374151;
+}
+
