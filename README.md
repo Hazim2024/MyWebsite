@@ -2,7 +2,7 @@
 
 My personal CV and portfolio website showcasing my background, experience, and projects.  
 
-🌐 **Live Site:** [View Portfolio](https://Hazim2024.github.io/MyWebsite)  
+🌐 **Live Site:** [View Portfolio](https://Hazim2024.github.io/MyWebsite){:target="_blank"}
 
 ## 🛠️ Built With  
 - **HTML5** – Core website structure  
