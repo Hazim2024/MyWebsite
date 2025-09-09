@@ -1,4 +1,4 @@
-# Hazim Iftikhar – Portfolio Website  
+# Hazim2024.github.io/MyWebsite  
 
 My personal CV/portfolio website.
 
