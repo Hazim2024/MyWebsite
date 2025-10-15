@@ -268,7 +268,7 @@
 
       <!-- Internship Project -->
 <div class="p-4 border rounded-lg border-gray-300 dark:border-gray-700">
-  <h3 class="text-xl font-semibold mb-2">Lucas and Co Consultants - KYC Compliance Platform (Internship)</h3>
+  <h3 class="text-xl font-semibold mb-2">KYC Compliance Platform (Internship)</h3>
     <p class="text-gray-700 dark:text-gray-300">
     During my internship, I worked on a Know Your Customer (KYC) compliance web application, built on <a href="https://toca.io/" target="_blank" class="text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white no-underline transition-colors"><strong>Toca.io</strong>.</a> 
     The platform is designed to streamline client onboarding, document submission and identity verification. </p>
@@ -297,26 +297,45 @@
     <ul class="list-disc ml-6">
       <li>Implemented the overall frontend structure, including page layouts, tables, headers and footers, similar to the dashboard interface shown below.</li>
     </ul>
+    <a href="assets/images/dashboard.jpeg" target="_blank">
+      <img src="assets/images/dashboard.jpeg" alt="Dashboard" class="mt-2 rounded-lg border border-gray-300 dark:border-gray-700">
+    </a>
+
 
     <h4 class="font-semibold">Week 3 and 4 - Making the Platform Functional</h4>
     <ul class="list-disc ml-6">
-      <li>Connected the frontend to the database and implemented logic for tracking client cases and document statuses, as seen in the “Case in Progress” interface below.</li>
+      <li>Connected the frontend to the database and implemented logic for tracking client cases and document statuses, as seen in the Case in Progress interface below.</li></ul> 
+      <a href="assets/images/CaseInProgress.jpeg" target="_blank">
+        <img src="assets/images/CaseInProgress.jpeg" alt="Case in Progress" class="mt-2 rounded-lg border border-gray-300 dark:border-gray-700">
+      </a>
+    <ul class="list-disc ml-6">
       <li>Gained practical experience with database design and integration.</li>
     </ul>
 
-    <h4 class="font-semibold">Week 5 - Client Onboarding</h4>
+    <h4 class="font-semibold">Week 5 - Client Onboarding Page</h4>
     <ul class="list-disc ml-6">
-      <li>Developed the client onboarding page where clients can upload identity documents for verification (see below).</li>
+      <li>Developed the client onboarding page where clients can upload identity documents for verification.</li>
     </ul>
 
     <h4 class="font-semibold">Week 6 and 7 - API Integration & Workflow Automation</h4>
     <ul class="list-disc ml-6">
-      <li>Integrated VSID API to verify client identities digitally.</li>
+      <li>Integrated <a href="https://portal.virtualsignature.com/api-doc/docs" target="_blank" class="text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white no-underline transition-colors"><strong>VSid</strong></a> API to verify client identities digitally.</li>
       <li>Automated workflows for document requests, digital signing and verification.</li>
     </ul>
 
   </div>
 </div>
+
+<!-- JavaScript to toggle the hidden section -->
+<script>
+  const viewMoreBtn = document.getElementById('viewMoreBtn');
+  const internshipDetails = document.getElementById('internshipDetails');
+
+  viewMoreBtn.addEventListener('click', () => {
+    internshipDetails.classList.toggle('hidden');
+    viewMoreBtn.textContent = internshipDetails.classList.contains('hidden') ? 'View More' : 'View Less';
+  });
+</script>
 
 
       <div class="p-4 border rounded-lg border-gray-300 dark:border-gray-700">
